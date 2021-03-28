@@ -89,7 +89,7 @@ app.use(express.static("public"));
 
 // https://expressjs.com/en/starter/basic-routing.html
 app.get("/", (request, response) => {
-  response.sendFile(__dirname + "/views/.send.html");
+  response.sendFile(__dirname + "/views/main.html");
 });
 
 
@@ -108,6 +108,15 @@ app.get("/main", (request, response) => {
   response.sendFile(__dirname + "/views/main.html");
 });
 
+// https://expressjs.com/en/starter/basic-routing.html
+app.get("/filteroptions", (request, response) => {
+  response.sendFile(__dirname + "/views/filteroptions.html");
+});
+
+// https://expressjs.com/en/starter/basic-routing.html
+app.get("/search", (request, response) => {
+  response.sendFile(__dirname + "/views/search.html");
+});
 
 
 // send the default array of dreams to the webpage
